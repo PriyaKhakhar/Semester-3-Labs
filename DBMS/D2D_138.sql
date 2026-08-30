@@ -676,9 +676,37 @@ select rtrim('  hello world         ')
 --Write a query to display first 4 & Last 5 characters of ‘SQL Server’. 
 select substring('SQL Server',4,5)
 
-11. Write a query to convert a string ‘1234.56’ to number (Use cast and convert function). 
-12. Write a query to convert a float 10.58 to integer (Use cast and convert function). 
-13. Put 10 space before your name using function. 
-14. Combine two strings using + sign as well as CONCAT (). 
-15. Find reverse of “Darshan”. 
-16. Repeat your name 3 times.
+-- 11. Write a query to convert a string ‘1234.56’ to number
+-- (Use CAST and CONVERT function).
+
+SELECT CAST('1234.56' AS DECIMAL(10,2)) AS Number_Value;
+SELECT CONVERT(DECIMAL(10,2), '1234.56') AS Number_Value;
+
+
+-- 12. Write a query to convert a float 10.58 to integer
+-- (Use CAST and CONVERT function).
+
+SELECT CAST(10.58 AS INT) AS Integer_Value;
+SELECT CONVERT(INT, 10.58) AS Integer_Value;
+
+
+-- 13. Put 10 spaces before your name using function.
+
+SELECT SPACE(10) + 'Priya' AS Name_With_Spaces;
+
+
+-- 14. Combine two strings using + sign as well as CONCAT().
+
+SELECT 'Priya' + ' Khakhar' AS Using_Plus;
+
+SELECT CONCAT('Priya', ' Khakhar') AS Using_Concat;
+
+
+-- 15. Find reverse of “Darshan”.
+
+SELECT REVERSE('Darshan') AS Reverse_String;
+
+
+-- 16. Repeat your name 3 times.
+
+SELECT REPLICATE('Priya ', 3) AS Repeated_Name;
