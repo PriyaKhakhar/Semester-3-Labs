@@ -1,0 +1,17 @@
+<!-- WAP in JavaScript to print the GCD of two number. (A) -->
+ <html>
+    <head></head>
+    <body>  
+        <script>
+            var n1=parseInt(prompt("Enter first number:"));
+            var n2=parseInt(prompt("Enter second number:"));
+            var gcd = 1;
+            for (var i = 1; i <= n1 && i <= n2; i++) {
+                if (n1 % i === 0 && n2 % i === 0) {
+                    gcd = i;
+                }
+            }
+            console.log("GCD of " + n1 + " and " + n2 + " is: " + gcd);
+        </script>
+    </body>
+ </html>

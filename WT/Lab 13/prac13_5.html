@@ -1,0 +1,22 @@
+<!-- Write a JavaScript to take 2-digit number and then separate these 2 digits, then
+multiply first digit by itself for second digit times. (For example, 23 should be separated
+as 2 and 3. 2 should multiply with itself 3 times). (B) -->
+<!-- WAP in JavaScript to print the GCD of two number. (A) -->
+ <html>
+    <head></head>
+    <body>  
+        <script>
+            var n1=parseInt(prompt("Enter number:"));
+            var rem;
+            for(var i=1;i<=n1;i++){
+                rem=n1%10;
+                n1=parseInt(n1/10);
+                console.log(rem);
+            }
+            for(var i=1;i<=rem;i++){
+                console.log(rem*rem);
+            }
+            
+        </script>
+    </body>
+ </html>
