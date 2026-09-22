@@ -1,0 +1,20 @@
+<!--WAP to display given patterns using JavaScript. (A) Pattern 1:
+*
+* *
+* * *
+* * * * 
+* * * * * -->
+<html>
+    <head></head>
+    <body>
+        <script>
+            var rows = parseInt(prompt("Enter the number of rows:"));
+            for (var i = 1; i <= rows; i++) {
+                var pattern = "";
+                for (var j = 1; j <= i; j++) {
+                    pattern += "* ";
+                }
+                console.log(pattern);
+            }
+        </script>
+    </body>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Numbers Range</title>
+</head>
+<body>
+    <script>
+        var start = parseInt(prompt("Enter the starting number:"));
+        var end = parseInt(prompt("Enter the ending number:"));
+
+        console.log("Prime numbers between " + start + " and " + end + " are:");
+
+        for (var i = start; i <= end; i++) {
+            var isPrime = true;
+
+            if (i < 2) {
+                isPrime = false;
+            } 
+            else {
+                for (var j = 2; j * j <= i; j++) { 
+                    if (i % j === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+            }
+
+            if (isPrime) {
+                console.log(i);
+            }
+        }
+    </script>
+</body>
+</html>
