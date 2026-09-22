@@ -1,3 +1,4 @@
+
 // 53. WAP to copy a linked list. Take 2 linked lists
 
 #include<stdio.h>
@@ -9,54 +10,15 @@ struct node
     struct node *link;
 };
 
+struct node *FIRST = NULL;
 struct node *FIRST1 = NULL;
-struct node *FIRST2 = NULL;
 
-void copy(struct node *first1)
+void create()
 {
-    struct node *temp, *newnode, *last = NULL;
+    struct node *newnode, *save;
+    int choice;
 
-    if(first1 == NULL)
-    {
-        printf("List is empty\n");
-        return;
-    }
-
-    temp = first1;
-
-    while(temp != NULL)
-    {
-        newnode = (struct node *)malloc(sizeof(struct node));
-
-        newnode->info = temp->info;
-        newnode->link = NULL;
-
-        if(FIRST2 == NULL)
-        {
-            FIRST2 = newnode;
-            last = newnode;
-        }
-        else
-        {
-            last->link = newnode;
-            last = newnode;
-        }
-
-        temp = temp->link;
-    }
-
-    printf("Linked list copied successfully\n");
-}
-
-void main()
-{
-    struct node *newnode, *temp;
-    int size, i;
-
-    printf("Enter size of first linked list: ");
-    scanf("%d", &size);
-
-    for(i = 0; i < size; i++)
+    do
     {
         newnode = (struct node *)malloc(sizeof(struct node));
 
@@ -65,43 +27,84 @@ void main()
 
         newnode->link = NULL;
 
-        if(FIRST1 == NULL)
+        if(FIRST == NULL)
         {
-            FIRST1 = newnode;
-            temp = newnode;
+            FIRST = newnode;
+            save = newnode;
         }
         else
         {
-            temp->link = newnode;
-            temp = newnode;
+            save->link = newnode;
+            save = newnode;
         }
+
+        printf("Do you want to add another node? (1/0): ");
+        scanf("%d", &choice);
+
+    } while(choice == 1);
+}
+
+struct node *copy(struct node *first)
+{
+    struct node *save, *save1, *newnode;
+
+    if(first == NULL)
+    {
+        printf("List is empty\n");
+        return NULL;
     }
 
-    printf("First linked list created successfully\n");
+    newnode = (struct node *)malloc(sizeof(struct node));
 
-    copy(FIRST1);
+    newnode->info = first->info;
+    newnode->link = NULL;
 
-    printf("Elements of first linked list:\n");
+    FIRST1 = newnode;
 
-    temp = FIRST1;
+    save = first;
 
-    while(temp != NULL)
+    while(save->link != NULL)
     {
-        printf("%d ", temp->info);
-        temp = temp->link;
+        save1 = newnode;
+        save = save->link;
+
+        newnode = (struct node *)malloc(sizeof(struct node));
+
+        newnode->info = save->info;
+        newnode->link = NULL;
+
+        save1->link = newnode;
     }
 
-    printf("\n");
+    printf("List copied successfully\n");
+    return FIRST1;
+}
 
-    printf("Elements of second linked list:\n");
+void display(struct node *first)
+{
+    struct node *save;
 
-    temp = FIRST2;
+    save = first;
 
-    while(temp != NULL)
+    while(save != NULL)
     {
-        printf("%d ", temp->info);
-        temp = temp->link;
+        printf("%d ", save->info);
+        save = save->link;
     }
 
     printf("\n");
 }
+
+int main()
+{
+    create();
+
+    printf("\nFirst linked list:\n");
+    display(FIRST);
+
+    FIRST1 = copy(FIRST);
+
+    printf("\nSecond linked list:\n");
+    display(FIRST1);
+}
+
