@@ -1,0 +1,16 @@
+<!-- WAP in JavaScript to print the factors of given number.(A) -->
+<html>
+    <head></head>
+    <body>
+        <script>
+            var num = parseInt(prompt("Enter a number:"));
+            var factors = [];
+            for (var i = 1; i <= num; i++) {
+                if (num % i === 0) {
+                    factors.push(i);
+                }
+            }
+            console.log("Factors of " + num + " are: " + factors.join(", "));
+        </script>
+    </body>
+</html>
