@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Callback Function</title>
+</head>
+<body>
+
+<script>
+    function message(name, callback) {
+        document.write("Hello " + name + "<br>");
+        callback();
+    }
+
+    function showMessage() {
+        document.write("Welcome to JavaScript!");
+    }
+
+    message("Priya", showMessage);
+</script>
+
+</body>
+</html>

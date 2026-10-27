@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Class</title>
+</head>
+<body>
+
+<script>
+    class Student {
+
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        display() {
+            document.write("Name: " + this.name + "<br>");
+            document.write("Age: " + this.age);
+        }
+    }
+
+    let s1 = new Student("Priya", 19);
+
+    s1.display();
+</script>
+
+</body>
+</html>
