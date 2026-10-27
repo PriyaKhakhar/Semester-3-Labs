@@ -1,0 +1,53 @@
+ <!-- Chain multiple Promises to represent steps in a task (e.g., load → process → save) -->
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Promise Chaining</title>
+</head>
+<body>
+
+    <h2>Promise Chaining</h2>
+    <button onclick="startTask()">Start Task</button>
+
+    <p id="result"></p>
+
+    <script>
+        function load() {
+            return new Promise(function(resolve) {
+                resolve("Data Loaded");
+            });
+        }
+
+        function process() {
+            return new Promise(function(resolve) {
+                resolve("Data Processed");
+            });
+        }
+
+        function save() {
+            return new Promise(function(resolve) {
+                resolve("Data Saved");
+            });
+        }
+
+        function startTask() {
+
+            load()
+                .then(function(message) {
+                    document.getElementById("result").innerHTML = message;
+                    return process();
+                })
+                .then(function(message) {
+                    document.getElementById("result").innerHTML +=
+                        "<br>" + message;
+                    return save();
+                })
+                .then(function(message) {
+                    document.getElementById("result").innerHTML +=
+                        "<br>" + message;
+                });
+        }
+    </script>
+
+</body>
+</html>

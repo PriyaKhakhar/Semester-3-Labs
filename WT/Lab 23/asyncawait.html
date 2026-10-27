@@ -1,0 +1,32 @@
+<!-- Use async and await to simplify Promise-based code. -->
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Async Await</title>
+</head>
+<body>
+
+    <h2>Async and Await</h2>
+    <button onclick="start()">Start</button>
+
+    <p id="result"></p>
+
+    <script>
+
+        function getData() {
+            return new Promise(function(resolve) {
+                resolve("Data received successfully!");
+            });
+        }
+
+        async function start() {
+
+            let result = await getData();
+
+            document.getElementById("result").innerHTML = result;
+        }
+
+    </script>
+
+</body>
+</html>
