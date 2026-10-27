@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Destructuring</title>
+</head>
+<body>
+
+    <h2>Student Details</h2>
+
+    <script>
+        let student = {
+            name: "Priya",
+            details: {
+                subject: "JavaScript"
+            },
+            marks: [85, 90, 88]
+        };
+
+        // Object destructuring
+        let {
+            name,
+            details: { subject }
+        } = student;
+
+        // Array destructuring
+        let [mark1, mark2] = student.marks;
+
+        console.log("Name:", name);
+        console.log("Subject:", subject);
+        console.log("First Mark:", mark1);
+        console.log("Second Mark:", mark2);
+
+        document.write("Name: " + name + "<br>");
+        document.write("Subject: " + subject + "<br>");
+        document.write("First Mark: " + mark1 + "<br>");
+        document.write("Second Mark: " + mark2);
+    </script>
+
+</body>
+</html>

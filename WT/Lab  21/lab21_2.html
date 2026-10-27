@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Default Parameter</title>
+</head>
+<body>
+
+    <h2>Student Course</h2>
+
+    <script>
+        function student(name, course = "Web Development") {
+            return "Name: " + name + "<br>Course: " + course;
+        }
+
+        document.write(student("Priya"));
+        document.write("<br><br>");
+        document.write(student("Priya", "Computer Engineering"));
+    </script>
+
+</body>
+</html>

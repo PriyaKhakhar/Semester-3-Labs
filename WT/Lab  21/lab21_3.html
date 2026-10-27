@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Default Course</title>
+</head>
+<body>
+
+    <h2>Student Details</h2>
+
+    <script>
+        function displayStudent(name, course = "Web Development") {
+            return `${name} is studying ${course}`;
+        }
+
+        document.write(displayStudent("Priya") + "<br>");
+        document.write(displayStudent("Priya", "Java"));
+    </script>
+
+</body>
+</html>
