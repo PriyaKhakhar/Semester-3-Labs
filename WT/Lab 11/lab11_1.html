@@ -1,0 +1,35 @@
+<!-- Create a webpage that applies different styles to elements using pseudo-classes such as
+:hover for buttons, :focus for form inputs, and :nth-child for styling specific list. -->
+<html>
+    <head>
+        <style>
+            button:hover {
+                background-color: blue;
+                color: white;
+            }
+            form input:focus {
+                border: 2px solid green;
+            }
+            ul li:nth-child(odd) {
+                background-color: lightblue;
+            }
+        </style>
+    </head>
+    <body>
+        <button>Hover over me</button>
+        <br>
+        <hr>    
+        <form>
+            <input type="text" placeholder="Focus on me">
+        </form>
+        <hr>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+
+    </body>
+</html>
