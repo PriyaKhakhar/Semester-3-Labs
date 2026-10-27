@@ -1,0 +1,32 @@
+<!-- // 2. Read an array and sort in ascending order -->
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+                let input = prompt("Enter numbers separated by space:");
+                let arr = input.split(" ");
+
+                for (let i = 0; i < arr.length; i++) {
+                    arr[i] = parseInt(arr[i]);
+                }
+
+                for (let i = 0; i < arr.length - 1; i++) {
+                    for (let j = i + 1; j < arr.length; j++) {
+                        if (arr[i] > arr[j]) {
+                            let temp = arr[i];
+                            arr[i] = arr[j];
+                            arr[j] = temp;
+                        }
+                    }
+                }
+
+                console.log("Array in ascending order:");
+
+                for (let i = 0; i < arr.length; i++) {
+                    document.writeln(arr[i]);
+                }
+        </script>
+    </body>
+</html>
