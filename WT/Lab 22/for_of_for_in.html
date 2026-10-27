@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loop Example</title>
+</head>
+<body>
+    <h2>for...of and for...in</h2>
+
+    <script>
+        let fruits = ["Apple", "Banana", "Mango"];
+
+        document.write("<b>Using for...of:</b><br>");
+
+        for (let fruit of fruits) {
+            document.write(fruit + "<br>");
+        }
+
+        let student = {
+            name: "Priya",
+            age: 19,
+            course: "Computer Engineering"
+        };
+
+        document.write("<br><b>Using for...in:</b><br>");
+
+        for (let key in student) {
+            document.write(key + ": " + student[key] + "<br>");
+        }
+    </script>
+</body>
+</html>

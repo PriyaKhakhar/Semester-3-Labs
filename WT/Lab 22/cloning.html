@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cloning Example</title>
+</head>
+<body>
+    <h2>Object and Array Cloning</h2>
+
+    <script>
+        // Array cloning using spread operator
+        let numbers = [10, 20, 30];
+
+        let clonedArray = [...numbers];
+
+        document.write("Original Array: " + numbers + "<br>");
+        document.write("Cloned Array: " + clonedArray + "<br><br>");
+
+        // Object cloning using spread operator
+        let student = {
+            name: "Priya",
+            marks: 90
+        };
+
+        let clonedStudent = {...student};
+
+        document.write("Original Object: " + student.name + ", " + student.marks + "<br>");
+        document.write("Cloned Object: " + clonedStudent.name + ", " + clonedStudent.marks + "<br><br>");
+
+        // Object cloning using Object.assign()
+        let employee = {
+            name: "Riya",
+            salary: 30000
+        };
+
+        let clonedEmployee = Object.assign({}, employee);
+
+        document.write("Original Employee: " + employee.name + ", " + employee.salary);
+        document.write("<br>");
+        document.write("Cloned Employee: " + clonedEmployee.name + ", " + clonedEmployee.salary);
+    </script>
+</body>
+</html>
