@@ -1,0 +1,37 @@
+<!-- Create ES6 modules using export and import with simple math functions -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ES6 Modules</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <h2>ES6 Modules Example</h2>
+
+    <button onclick="showResult()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script type="module">
+
+        import { add, subtract, multiply, divide } from "./math.js";
+
+        window.showResult = function() {
+
+            let a = 10;
+            let b = 5;
+
+            document.getElementById("result").innerHTML =
+                "Addition: " + add(a, b) +
+                "<br>Subtraction: " + subtract(a, b) +
+                "<br>Multiplication: " + multiply(a, b) +
+                "<br>Division: " + divide(a, b);
+        }
+
+    </script>
+
+</body>
+</html>
