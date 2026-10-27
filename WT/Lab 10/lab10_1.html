@@ -1,0 +1,44 @@
+<!-- Create a webpage that changes its background color or layout when viewed on different
+devices using media queries (e.g., mobile: max-width 600px, tablet: 601px–1024px,
+desktop: 1025px and above). -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Example</title>
+    <style>
+        #div1{
+            background-color: lightblue;
+            width: 50%;
+            float: left;
+        }
+        #div2{
+            background-color: lightgreen;
+            width: 50%;
+            float: left;
+        }
+        @media(max-width:600px)
+        {
+            #div1{
+                width: 100%;
+            }
+            #div2{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Design Example</h1>
+    <p>This webpage changes its background color based on the device width.</p>
+    <div id="div1">
+        <h2>Section 1</h2>
+        <p>This is the first section of the webpage.</p>
+    </div>
+    <div id="div2">
+        <h2>Section 2</h2>
+        <p>This is the second section of the webpage.</p>
+    </div>
+
+</body>
+</html>

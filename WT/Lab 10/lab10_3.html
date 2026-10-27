@@ -1,0 +1,90 @@
+<!-- . Build a responsive HTML page where specific elements (like a sidebar or extra content)
+are hidden or shown based on screen size using media queries. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar Example</title>
+    <style>
+        .abc{
+            display:flex ;
+        }
+       
+        #div1{
+            background-color: lightblue;
+            width: 200px; 
+           
+            
+        }
+
+        #div2{
+            background-color: lightgreen;
+            width: 200px;
+            display:flex;
+            
+        }
+        #div3{
+            background-color: lightcoral;
+            width: 200px;
+            display:flex;
+        }
+        @media(max-width:600px)
+        {
+            #div1{
+                display:none;
+            }
+            #div2{
+                display:none;
+            }
+            #div3{
+                display:flex;
+            }
+        }
+        @media(min-width:601px ) and (max-width: 1024px)
+        {
+            #div1{
+                display:none;
+            }
+            #div2{
+                display:flex;
+            }
+            #div3{
+                display:flex;
+            }
+        }
+        @media(min-width:1025px)
+        {
+            #div1{
+                display:flex;
+            }
+            #div2{
+                display:flex;
+            }
+            #div3{
+                display:flex;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- <h1>Responsive Sidebar Example</h1>
+    <p>This webpage shows or hides specific elements based on the screen width.</p> -->
+    <div class="abc">
+    <div id="div1">
+        <h2>Sidebar 1</h2>
+        <p>This is the first sidebar.</p>
+    </div>  
+    <div id="div2">
+        <h2>Sidebar 2</h2>
+        <p>This is the second sidebar.</p>
+        </div>
+    <div id="div3">
+        <h2>Sidebar 3</h2>
+        <p>This is the third sidebar, visible only on smaller screens.</p>
+    </div>
+    </div>
+
+</body>
+</html>
+    

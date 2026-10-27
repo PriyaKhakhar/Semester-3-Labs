@@ -1,0 +1,42 @@
+<!-- Design a webpage where font size and image dimensions adjust based on screen width
+using media queries to improve readability on all devices. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Font and Image Sizes</title>
+    <style>
+        body {
+            font-size: 16px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            body {
+                font-size: 18px;
+            }
+        } 
+
+        @media (min-width: 1025px) {
+            body {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Design Example</h1>
+    <p>This webpage adjusts its font size and image dimensions based on the screen width.</p>
+    <img src="lab/download.png" alt="Example Image">
+</body>
+</html>
